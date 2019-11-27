@@ -20,3 +20,5 @@ print("Отлично. Все сделано")
 
 out_file.close()
 in_file.close()
+
+# python 17.py from.txt in.txt
