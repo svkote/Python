@@ -2,22 +2,13 @@ from os.path import exists
 
 from_file = "from.txt"
 to_file = "in.txt"
+indata = open(from_file).read()
 
-print(f"копирование данных из файла {from_file} в файл {to_file}")
+input(f"""Копирование данных из файла {from_file} в файл {to_file}.\n Исходный файл имеет размер {len(indata)} байт. \nЦелевой файл существует? {exists(to_file)}\nГотов. \nНажмите клавишу Enter для продолжения или ctrl+c для отмены.> """)
 
-in_file = open(from_file)
-indata = in_file.read()
-
-print(f"Исходный файл имеет размер {len(indata)} байт")
-print(f"Целевой файл существует? {exists(to_file)}")
-print("Готов. Нажмите клавишу Enter для продолжения или ctrl+c для отмены.")
-input(" > ")
-
-out_file = open(to_file, 'w')
-out_file.write(indata)
-
+open(to_file, 'w').write(indata)
 print("Отлично. Все сделано")
 
-out_file.close()
-in_file.close()
+open(to_file, 'w').close()
+open(from_file).close()
 
