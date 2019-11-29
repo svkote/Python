@@ -7,11 +7,9 @@ def loop(number, b=0):
         numbers.append(b)
         b += 1
         print("Текущие значения: ", numbers, f"\nВ конце значение b равно {b}")
+    print("Значения: ", end="")
+    for num in numbers:
+        print(num, end=", ")
 
 
 loop(6)
-
-print("Значения: ", end="")
-
-for num in numbers:
-    print(num, end=", ")
