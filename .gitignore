@@ -8,9 +8,9 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
+36 game/build/
 develop-eggs/
-dist/
+36 game/dist/
 downloads/
 eggs/
 .eggs/
