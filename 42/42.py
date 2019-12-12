@@ -26,6 +26,7 @@ class Person(object):
 # класс Employee наследует Person
 class Employee(Person):
     def __init__(self, name, salary):
+        # Обращение к родительскому классу метода инит
         super(Employee, self).__init__(name)
         self.salary = salary
 
@@ -45,7 +46,7 @@ class Halibut(Fish):
     pass
 
 
-# Барбос наследует Dog
+# Барбос наследует Dog и является экземпялом класса Dog, Animal и object
 barbos = Dog("Барбос")
 # барсик наследует Cat
 barsik = Cat("Барсик")
