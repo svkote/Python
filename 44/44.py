@@ -13,3 +13,21 @@ son = Child()
 
 dad.implicit()
 son.implicit()
+
+
+# Явное переопределение
+class Parent(object):
+    def override(self):
+        print("Родитель 2")
+
+
+class Child(Parent):
+    def override(self):
+        print("Потомок 2")
+
+
+dad = Parent()
+son = Child()
+
+dad.override()
+son.override()
