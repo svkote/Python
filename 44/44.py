@@ -33,6 +33,7 @@ dad.override()
 son.override()
 
 
+# Видоизменение до и после
 class Parent(object):
     def altered(self):
         print("Родитеь 3")
@@ -50,3 +51,11 @@ son = Child()
 
 dad.altered()
 son.altered()
+
+
+# Комбинация взаимодействий
+class Parent(object):
+    def override(self):
+        print("Родитель override")
+    def implicit(self):
+        print("Родитель")
