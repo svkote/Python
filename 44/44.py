@@ -57,5 +57,32 @@ son.altered()
 class Parent(object):
     def override(self):
         print("Родитель override")
+
     def implicit(self):
-        print("Родитель")
+        print("Родитель implicit")
+
+    def altered(self):
+        print("Родитель altered")
+
+
+class Child(Parent):
+    def override(self):
+        print("Потомок override")
+
+    def altered(self):
+        print("Потомок 3 до вызова в родителе")
+        super(Child, self).altered()
+        print("Потомок 3 после вызова в родителе")
+
+
+dad = Parent()
+son = Child()
+
+dad.implicit()
+son.implicit()
+
+dad.override()
+son.override()
+
+dad.altered()
+son.altered()
